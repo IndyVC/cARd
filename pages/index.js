@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <img src="/public/hiro.png"></img>
+        <img src="/public/static/hiro.png"></img>
         <iframe
           className={styles.iframe}
           srcDoc="<!DOCTYPE html>
@@ -24,7 +24,7 @@ export default function Home() {
     arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false;'>
     <a-nft
     type='nft'
-    url='/public/qr'
+    url='/public/static/qr'
     smooth='true'
     smoothCount='10'
     smoothTolerance='.01'
