@@ -10,21 +10,32 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <img src="/public/hiro.png"></img>
         <iframe
           className={styles.iframe}
           srcDoc="<!DOCTYPE html>
 <html>
   <script src='https://aframe.io/releases/1.0.4/aframe.min.js'></script>
-  <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+  <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
   <body style='margin: 0px; overflow: hidden'>
-    <a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_9_3'>
-      <a-marker type='barcode' value='105'>
+    <a-scene vr-mode-ui='enabled: false;'
+    renderer='logarithmicDepthBuffer: true;'
+    embedded
+    arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false;'>
+    <a-nft
+    type='nft'
+    url='/public/qr'
+    smooth='true'
+    smoothCount='10'
+    smoothTolerance='.01'
+    smoothThreshold='5'
+  >
         <a-entity
           position='0 0 0'
           scale='0.02 0.02 0.02'
           gltf-model='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf'
         ></a-entity>
-      </a-marker>
+      </a-nft>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
