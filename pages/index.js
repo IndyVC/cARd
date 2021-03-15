@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <img src="/public/static/hiro.png"></img>
+        <Image src="/static/hiro.png" width="100px" height="100px"></Image>
         <iframe
           className={styles.iframe}
           srcDoc="<!DOCTYPE html>
@@ -24,7 +24,7 @@ export default function Home() {
     arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false;'>
     <a-nft
     type='nft'
-    url='/public/static/qr'
+    url='/qr'
     smooth='true'
     smoothCount='10'
     smoothTolerance='.01'
