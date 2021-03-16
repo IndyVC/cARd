@@ -9,10 +9,13 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="viewport"
+          content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+        />
       </Head>
 
       <main className={styles.main}>
-        <Image src="/QR/QR.fset" width="100px" height="100px"></Image>
         <iframe
           className={styles.iframe}
           srcDoc="<!DOCTYPE html>
@@ -21,21 +24,16 @@ export default function Home() {
   <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
   <body style='margin: 0px; overflow: hidden'>
     <a-scene vr-mode-ui='enabled: false;'
-    renderer='logarithmicDepthBuffer: true;'
     embedded
-    arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false;'>
+    arjs='sourceType: webcam;'>
     <a-marker
     preset='custom'
-    type='pattern'
-    url='/pattern-QR.patt'
-    smooth='true'
-    smoothCount='10'
-    smoothTolerance='.01'
-    smoothThreshold='5'
+    url='/marker.patt'
+
   >
         <a-entity
           position='0 0 0'
-          scale='0.02 0.02 0.02'
+          scale='1 1 1'
           gltf-model='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf'
         ></a-entity>
       </a-nft>
