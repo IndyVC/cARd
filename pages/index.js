@@ -1,6 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import { useEffect } from "react";
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -10,21 +12,22 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Image src="/static/hiro.png" width="100px" height="100px"></Image>
+        <Image src="/QR/QR.fset" width="100px" height="100px"></Image>
         <iframe
           className={styles.iframe}
           srcDoc="<!DOCTYPE html>
 <html>
   <script src='https://aframe.io/releases/1.0.4/aframe.min.js'></script>
-  <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+  <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
   <body style='margin: 0px; overflow: hidden'>
     <a-scene vr-mode-ui='enabled: false;'
     renderer='logarithmicDepthBuffer: true;'
     embedded
     arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false;'>
-    <a-nft
-    type='nft'
-    url='/qr'
+    <a-marker
+    preset='custom'
+    type='pattern'
+    url='/pattern-QR.patt'
     smooth='true'
     smoothCount='10'
     smoothTolerance='.01'
