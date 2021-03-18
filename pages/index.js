@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { useEffect } from "react";
+import Scanner from "../components/scanner/scanner.js";
 
 export default function Home() {
   return (
@@ -10,9 +12,10 @@ export default function Home() {
         />
         <title>Create Next App</title>
       </Head>
-      <script src="/viewer.js"></script>
 
-      <main></main>
+      <main>
+        <Scanner></Scanner>
+      </main>
     </div>
   );
 }

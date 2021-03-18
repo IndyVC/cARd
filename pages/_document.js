@@ -10,9 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script src="/vendor/three.min.js"></script>
-          <script src="/vendor/ar-nft.js"></script>
-          <script src="/vendor/GLTFLoader.js"></script>
+    
         </Head>
         <body>
           <Main />
